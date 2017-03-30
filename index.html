@@ -6,26 +6,16 @@
     <link rel="stylesheet" href="css/retain.css">
     <script type="text/javascript" src="bower_components/knockout/dist/knockout.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Signika+Negative" rel="stylesheet">
     <style>
 
-      #map {
-        height: 500px;
-        width: 100%;
-        /*position: absolute;*/
 
-      }
 
-      #list {
-        border: solid;
-/*        width:100%;*/
-        width: 100%;
-        height: 500px;
-      }
 
       html, body {
         margin: 0;
         padding: 0;
+        background:#38d4f0;
       }
     </style>
 
@@ -37,8 +27,8 @@
     <div class="row-fluid">
         <div class="col-md-12 col-lg-12">
             <div id="search-control-ui">
-                <p>Enter your search here</p>
-                <select data-bind="options: categories, value: filter" id="combo" select="All" style="width: 50%; margin: 20px">
+                <p id="question">What do you want to do in Corpus?</p>
+                <select data-bind="options: categories, value: filter" id="combo" select="All" style="width: 50%; margin: 20px; padding-bottom: 10px">
                 </select>
             </div>
         </div>
@@ -50,12 +40,12 @@
     <div class="row-fluid">
         <div class="col-md-12 col-lg-12">
          <div class="col-md-4 col-sm-12">
-            <div id="list" style="overflow:auto" >
+            <div id="list" style="overflow:auto; background: #ffb254; border-color: #ffb254; color: #0c04ff; font-family: 'Signika Negative', sans-serif;" >
                 <div data-bind="foreach: filteredPlaces">
                     <!-- <img src="" data-bind="" -->
-                    <div class="places">
-                    <div data-bind="text: name, click: incrementClickCounter, Model.toggleBounce" ></div>
-                    <div data-bind="text: url" ></div>
+                    <div class="places" >
+                    <div data-bind="text: name, click: incrementClickCounter" style= ></div>
+                    <div data-bind="text: url" src="#" style="font-size: 10px; color: #ff3c00 "></div>
                     <!-- <li data-bind="text: " -->
                     </div>
                 </div>
